@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+}
+#parallax {
+    width: 100%;
+    overflow: hidden; /* Hide overflow caused by scaling */
+}
+#additional-content{
+    height: 100vh;
+}
+.parallax-container {
+    /* position: relative; */
+    overflow: visible;
+    height: 100vh;
+}
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-out;
+    transform-origin: center;
+}
+.background {
+    background-image: url(./images/Sunset.png);
+    z-index: 1;
+    background-position: top;
+    background-size: 100%;
+}
+.sun {
+    background-image: url('./images/Sun.png');
+    z-index: 2;
+    transform: scale(0.8);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.reflection {
+    background-image: url(./images/Water.png);
+    z-index: 3;
+    transform: translateY(-100px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.yoga {
+    background-image: url(./images/Yoga-outlines.png);
+    z-index: 4;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.beach {
+    background-image: url(./images/Beach.png);
+    z-index: 5;
+    transform: translateY(80px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
