@@ -3,14 +3,16 @@ html, body {
 }
 #parallax {
     width: 100%;
-    overflow: hidden; /* Hide overflow caused by scaling */
+    overflow: hidden;
 }
 #additional-content{
     height: 100vh;
 }
 .parallax-container {
     /* position: relative; */
-    overflow: visible;
+    width: 100vw;
+    overflow-y: visible;
+    overflow-x: hidden;
     height: 100vh;
 }
 .parallax-layer {
@@ -26,7 +28,7 @@ html, body {
     background-image: url(./images/Sunset.png);
     z-index: 1;
     background-position: top;
-    background-size: 100%;
+    /* background-size: 100%; */
 }
 .sun {
     background-image: url('./images/Sun.png');
