@@ -54,17 +54,11 @@ html, body {
     height: 50dvh;
     bottom: 0;
 }
-.yoga {
-    background-image: url(./images/Yoga-outlines.png);
+.beach-yoga {
+    transform-origin: 50% 46%;
+    transform: translate(0%, 27%);
+    background-image: url(./images/Beach+Yoga_Large.png);
     z-index: 4;
     background-size: contain;
     background-repeat: no-repeat;
-}
-.beach {
-    background-image: url(./images/Beach.png);
-    z-index: 5;
-    transform: translateY(80px);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
 }
