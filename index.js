@@ -10,8 +10,10 @@ gsap.to(sections, {
     scrollTrigger: {
         trigger: ".container",
         pin: true,
-        scrub: 1,
+        scrub: 0.1,
         end: () => "+=" + document.querySelector(".container").offsetWidth
     }
 });
+
+
 
