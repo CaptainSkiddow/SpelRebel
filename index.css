@@ -155,6 +155,7 @@ html {
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .panel {
@@ -164,11 +165,40 @@ html {
     background-color: blue;
 }
 
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .next_element {
     height: 100vh;
     background-color: yellow;
+}
+
+.outer {
+    position: relative;
+    cursor: none;
+}
+
+.outer,
+.inner {
+    width: 50vw;
+    padding: 20px;
+    font-size: 30px;
+    background: yellow;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+}
+
+.cursor,
+.inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: green;
+}
+
+.cursor {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: none;
 }
