@@ -140,24 +140,28 @@ table {
 
 
 
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
 
 
 
+.container {
+    width: 400%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-
-
-
-
-
-
+.panel {
+    width: 100vw;
+    font-size: 60px;
+    font-weight: bold;
+}
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.time_element {}
