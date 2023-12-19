@@ -1,19 +1,21 @@
 html, body {
     margin: 0;
 }
+body{
+    background: #fcf9d6;
+}
 #parallax {
-    width: 100%;
     overflow: hidden;
 }
 #additional-content{
     height: 100vh;
 }
 .parallax-container {
-    /* position: relative; */
+    position: relative;
     width: 100vw;
-    overflow-y: visible;
+    overflow-y: clip;
     overflow-x: hidden;
-    height: 100vh;
+    height: 120vh;
 }
 .parallax-layer {
     position: absolute;
@@ -51,7 +53,7 @@ html, body {
 .reflection {
     z-index: 3;
     background: linear-gradient(180deg, rgba(232,86,49,1) 0%, rgba(142,32,96,1) 100%);
-    height: 50dvh;
+    height: 66dvh;
     bottom: 0;
 }
 .beach-yoga {
@@ -61,4 +63,5 @@ html, body {
     z-index: 4;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: opacity 0.2s ease-out;
 }

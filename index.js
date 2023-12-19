@@ -46,12 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
             maxHeight: 100
         };
 
+        // Flag to check if all images are fully scaled
+        let allImagesFullyScaled = true;
+
         // Apply scale, translation, custom transform, and height change to each image
         imageSettings.forEach((settings, index) => {
             const imgScale = calculateScale(settings.initialScale, scrollPos, settings.scaleRate, settings.maxScale);
             const imgTranslate = calculateTranslation(settings.initialTranslateY, scrollPos, settings.translateYRate);
-
             const img = document.getElementById(`img${index + 1}`);
+
+            // Check if the image is not fully scaled
+            if (imgScale < settings.maxScale) {
+                allImagesFullyScaled = false;
+            }
 
             // Combine new transformations with custom ones
             let transformStyles = `scale(${imgScale})`;
@@ -65,6 +72,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index === 0) {
                 const imgHeight = calculateHeight(img1HeightSettings.initialHeight, scrollPos, img1HeightSettings.heightRate, img1HeightSettings.maxHeight);
                 img.style.height = `${imgHeight}px`;
+            }
+            
+            // Set opacity to 0 if all images are fully scaled
+            if (allImagesFullyScaled) {
+                imageSettings.forEach((_, index) => {
+                    const img = document.getElementById(`img${index + 1}`);
+                    img.style.opacity = '0';
+                });
+            } else {
+                // Reset opacity if not all images are fully scaled
+                imageSettings.forEach((_, index) => {
+                    const img = document.getElementById(`img${index + 1}`);
+                    img.style.opacity = '';
+                    
+                    // Specific code for fading out the third image
+                    if (index === 2) { // img3 is the third image (index 2)
+                        const img = document.getElementById(`img${index + 1}`);
+                        img.style.opacity = imgScale >= settings.maxScale ? '0' : '';
+                    }
+                });
             }
         });
     });
