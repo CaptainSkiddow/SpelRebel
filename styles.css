@@ -14,46 +14,23 @@ main {
 
 footer {
     background-color: rgb(18, 16, 60);
-    padding: 150px 0 50px; 
+    padding: 100px 200px 20px; /* Aangepaste padding voor de footer */
     color: rgb(251, 249, 219);
-    margin-top: auto; 
+    margin-top: auto;
+    display: flex; /* Zet de footer als een flex-container */
+    justify-content: space-between; /* Verdeel ruimte tussen de items */
+    align-items: flex-start; /* Uitlijning aanpassen */
 }
+
 .footer-content {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    align-items: flex-start; /* Uitlijning van de linkerinhoud */
 }
-
-.footer-info,
-.footer-links {
-    text-align: center; 
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 150px;
-   
-    font-size: 0.8em;
-}
-
-
-
 
 .footer-interest {
     font-family: Brevia, sans-serif;
     color: #F8AD42;
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -61,23 +38,48 @@ footer {
 
 .email-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
 }
 
 .white-line {
-    width: 40%; 
-    background-color: white; 
-    height: 2px; 
-    margin: 10px 10px; 
+    width: 40%;
+    background-color: white;
+    height: 0.5px; /* Correcte waarde */
+    margin: 10px 0;
 }
 
-.email-text, .arrow {
+.email-text {
     color: white;
-    margin: 0 5px; 
+    margin-bottom: 5px;
 }
 
+.email-confirm {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.arrow {
+    color: white;
+    margin-left: 5px;
+}
 
+.footer-right-content {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aangepaste uitlijning van de rechterinhoud */
+    margin-top: 40px; /* Aangepaste ruimte boven de rechterinhoud */
+}
+
+.footer-right-content h3 {
+    margin-top: 10px; /* Verminder de ruimte boven de kopjes */
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
