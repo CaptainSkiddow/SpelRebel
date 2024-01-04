@@ -1,9 +1,73 @@
+@font-face {
+    font-family: WorkSans;
+    src: url(/fonts/WorkSans-Medium.ttf);
+}
 html, body {
     margin: 0;
+    font-family: WorkSans;
 }
 body{
     background: #fcf9d6;
 }
+/* Menu ------------------- */
+.header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.empty, .menu{
+    width: 40%;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.logo h1{
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    top: 80px;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu ul li.item a{
+    color: #fff;
+    text-decoration: none;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999;
+}
+#close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+/* End menu */
+/* Parallax effect --------- */
 #parallax {
     overflow: hidden;
 }
@@ -45,10 +109,9 @@ body{
     background-position: center;
     height: 100%;
     position: absolute;
-    transform: scale(0.8);
     background-size: contain;
     background-repeat: no-repeat;
-    bottom: -120px;
+    bottom: -160px;
 }
 .reflection {
     z-index: 3;
@@ -65,3 +128,4 @@ body{
     background-repeat: no-repeat;
     transition: opacity 0.2s ease-out;
 }
+/* End parallax effect */

@@ -23,16 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.min(height, maxHeightPx);
     }
 
-    // Scroll event listener
-    window.addEventListener('scroll', () => {
+    // New function to apply transformations
+    function applyTransformations() {
         const scrollPos = window.scrollY;
 
-        // Custom settings for each image (initial scale, scale rate, max scale, initial translateY, translateY rate)
+        // Custom settings for each image
         const imageSettings = [
             // Sunset
             { initialScale: 1, scaleRate: 0, maxScale: 1, initialTranslateY: 0, translateYRate: 0, customTransform: '' },
             // Sun
-            { initialScale: 0.5, scaleRate: 0.2, maxScale: 12, initialTranslateY: 0, translateYRate: 0.5, customTransform: '' },
+            { initialScale: 0.8, scaleRate: 0.2, maxScale: 12, initialTranslateY: 0, translateYRate: 0.5, customTransform: '' },
             // Water/reflection
             { initialScale: 1, scaleRate: 0, maxScale: 1, initialTranslateY: 0, translateYRate: 10, customTransform: '' },
             // Yoga+Beach
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const imgHeight = calculateHeight(img1HeightSettings.initialHeight, scrollPos, img1HeightSettings.heightRate, img1HeightSettings.maxHeight);
                 img.style.height = `${imgHeight}px`;
             }
-            
+
             // Set opacity to 0 if all images are fully scaled
             if (allImagesFullyScaled) {
                 imageSettings.forEach((_, index) => {
@@ -94,5 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    }
+
+    // Call the function immediately to apply transformations on page load
+    applyTransformations();
+
+    // Scroll event listener
+    window.addEventListener('scroll', applyTransformations);
+
+    // Open overlay
+    document.querySelectorAll('.open-overlay').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = event.currentTarget.getAttribute('data-target');
+            document.getElementById(targetId).style.display = 'block';
+        });
     });
+
+    // Close overlay
+    document.querySelectorAll('.close-overlay').forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.style.display = 'none';
+        });
+    });
+
 });
