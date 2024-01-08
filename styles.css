@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    background-color: rgb(18, 16, 60);
+    padding: 100px 200px 20px; /* Aangepaste padding voor de footer */
+    color: rgb(251, 249, 219);
+    margin-top: auto;
+    display: flex; /* Zet de footer als een flex-container */
+    justify-content: space-between; /* Verdeel ruimte tussen de items */
+    align-items: flex-start; /* Uitlijning aanpassen */
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start; /* Uitlijning van de linkerinhoud */
+}
+
+.footer-interest {
+    font-family: Brevia, sans-serif;
+    color: #F8AD42;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.white-line {
+    width: 40%;
+    background-color: white;
+    height: 0.5px; /* Correcte waarde */
+    margin: 10px 0;
+}
+
+.email-text {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.email-confirm {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    color: white;
+    margin-left: 5px;
+}
+
+.footer-right-content {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aangepaste uitlijning van de rechterinhoud */
+    margin-top: 40px; /* Aangepaste ruimte boven de rechterinhoud */
+}
+
+.footer-right-content h3 {
+    margin-top: 10px; /* Verminder de ruimte boven de kopjes */
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Vorige stijlen blijven hetzelfde */
+
+.footer-left-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.footer-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.footer-menu,
+.footer-contact,
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-menu h3,
+.footer-contact h3,
+.footer-social h3 {
+    margin-top: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 5px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
