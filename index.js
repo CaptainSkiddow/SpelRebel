@@ -107,14 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', function(event) {
             event.preventDefault();
             var targetId = event.currentTarget.getAttribute('data-target');
-            document.getElementById(targetId).style.display = 'block';
+            document.getElementById(targetId).style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on the main body
         });
     });
 
     // Close overlay
     document.querySelectorAll('.close-overlay').forEach(button => {
         button.addEventListener('click', function() {
-            this.parentElement.style.display = 'none';
+            this.parentElement.parentElement.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling on the main body
         });
     });
 
