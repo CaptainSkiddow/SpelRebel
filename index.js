@@ -94,6 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+
+        // Change the color of the <a> tags in the menu
+        const menuItems = document.querySelectorAll('#header .menu ul .item a');
+        const logo = document.querySelector('#header .logo h1');
+        if (allImagesFullyScaled) {
+            menuItems.forEach(item => {
+                item.style.color = '#000'; // Replace 'newColor' with your desired color when zoom is complete
+            });
+            logo.style.top = '0px';
+            logo.style.color = '#000';
+        } else {
+            menuItems.forEach(item => {
+                item.style.color = '#fff'; // Replace 'originalColor' with the original color
+            });
+            logo.style.top = '80px';
+            logo.style.color = '#fff';
+        }
     }
 
     // Call the function immediately to apply transformations on page load

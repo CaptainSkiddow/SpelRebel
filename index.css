@@ -34,6 +34,7 @@ body{
     margin: 0;
     position: absolute;
     top: 80px;
+    transition: all 0.3s;
 }
 .menu ul{
     list-style: none;
@@ -43,6 +44,7 @@ body{
 .menu ul li.item a{
     color: #fff;
     text-decoration: none;
+    transition: all 0.3s;
 }
 /* End menu */
 /* Overlays: ------------------- */
@@ -61,6 +63,9 @@ body{
     color: #fff;
     align-items: center;
     justify-content: center;
+}
+.overlay a{
+    color: #fcf9d6;
 }
 .close-overlay {
     margin: 50px 0px;
@@ -129,6 +134,43 @@ body{
 .review p::after{
     transform: rotate(180deg);
 }
+.ons-team{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.team:first-child{
+    color: #fff;
+    background: none;
+}
+.team{
+    border-radius: 30px;
+    color: #000;
+    width: 23%;
+    background-color: #fff;
+}
+.team-head{
+    text-align: center;
+    background-color: #9FD0D6;
+    height: 110px;
+    border-radius: 30px 30px 0px 0px;
+    padding: 20px 0px;
+}
+.team-head h2{
+    margin: 0;
+}
+.team-head .team-foto img{
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+    background-color: #b3b3b3;
+}
+.team-content{
+    padding: 20px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 14px;
+}
 /* End overlay */
 /* Parallax effect --------- */
 #parallax {
@@ -181,6 +223,7 @@ body{
     background: linear-gradient(180deg, rgba(232,86,49,1) 0%, rgba(142,32,96,1) 100%);
     height: 66dvh;
     bottom: 0;
+    transition: none;
 }
 .beach-yoga {
     transform-origin: 50% 46%;
