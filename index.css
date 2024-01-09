@@ -185,6 +185,8 @@ body{
     overflow-y: clip;
     overflow-x: hidden;
     height: 120vh;
+    display: flex;
+    justify-content: center;
 }
 .parallax-layer {
     position: absolute;
@@ -233,5 +235,6 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     transition: opacity 0.2s ease-out;
+    min-width: 1300px;
 }
 /* End parallax effect */
