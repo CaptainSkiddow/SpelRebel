@@ -137,4 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Add the current year to the footers copyright
+    // Retrieve the current year
+    const currentYear = new Date().getFullYear();
+
+    // Access the span element by its ID
+    const yearSpan = document.getElementById('current-year');
+
+    // Set the text content of the span element to the current year
+    yearSpan.textContent = currentYear;
 });
