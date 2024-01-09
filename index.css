@@ -196,8 +196,8 @@ html {
 }
 
 .cursor {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
     border-radius: 0%;
     display: none;
@@ -207,4 +207,8 @@ html {
 
 .firstStep {
     display: flex;
+}
+
+#first.text {
+    color: black;
 }
