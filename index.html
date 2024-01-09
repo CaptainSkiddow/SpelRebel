@@ -1,13 +1,138 @@
 <!DOCTYPE html>
-<html lang="nl">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpelRebel</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Header -->
+    <div id="header" class="header">
+        <div class="empty"></div>
+        <div class="logo">
+            <h1>SpelRebel</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="item"><a href="#" class="open-overlay" data-target="overlay-over-ons">Over ons</a></li>
+                <li class="item"><a href="#" class="open-overlay" data-target="overlay-reviews">Reviews</a></li>
+                <li class="item"><a href="#" class="open-overlay" data-target="overlay-ons-team">Ons team</a></li>
+                <li class="item"><a href="#" class="open-overlay" data-target="overlay-sfeerbeelden">Sfeerbeelden</a></li>
+                <li class="item"><a href="#" class="open-overlay" data-target="overlay-contact">Contact</a></li>
+            </ul>
+        </div>        
+    </div>
+    <!-- Overlays -->
+    <div id="overlay-over-ons" class="overlay">
+        <div class="overlay-container">
+            <button class="close-overlay"><img class="close-arrow" src="images/up-arrow.png"></button>
+            <h1>Over ons</h1>
+            <h3>Missie:</h3>
+            <p>Onze missie is om het plezier dat wij met acrobatiek ervaren; het groeien van zelfvertrouwen en de triomf van het overwinnen van angst, 
+                spelenderwijs te delen. En zo bij te dragen aan een gemeenschap waarin we bewust zijn van de manier waarop we met elkaar omgaan en waar 
+                we jongeren stimuleren om samenwerkingen aan te gaan die hen dwingt uit hun solistische bubbel.</p>
+            <h3>Visie:</h3>
+            <p>Een wereld waarin spelen niet meer als kinderachtig wordt gezien.</p>
+        </div>
+    </div>
+    
+    <div id="overlay-reviews" class="overlay">
+        <div class="overlay-container">
+            <button class="close-overlay"><img class="close-arrow" src="images/up-arrow.png"></button>
+            <div class="reviews">
+                <div class="review">
+                    <p>Als ik na de les buiten sta, is het heerlijk stil in mijn hoofd. Te gek!</p>
+                </div>
+                <div class="review">
+                    <p>Nooit geweten dat ik die stilte in mijn hoofd zó nodig had.</p>
+                </div>
+                <div class="review">
+                    <p>Ik was echt toe aan wat ‘beweging’ in mijn leven, zonder te moeten joggen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-ons-team" class="overlay">
+        <div class="overlay-container">
+            <button class="close-overlay"><img class="close-arrow" src="images/up-arrow.png"></button>
+            <div class="ons-team">
+                <div class="team">
+                    <h1>Ons team</h1>
+                </div>
+                <div class="team">
+                    <div class="team-head">
+                        <h2>Bart Dieben</h2>
+                        <p>Instructeur</p>
+                        <div class="team-foto">
+                            <img src="images/bart-dieben.jpeg"/>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem.</p>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="team-head">
+                        <h2>Naam</h2>
+                        <p>Functie</p>
+                        <div class="team-foto">
+                            <img src="images/user.png"/>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem.</p>
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="team-head">
+                        <h2>Naam</h2>
+                        <p>Functie</p>
+                        <div class="team-foto">
+                            <img src="images/user.png"/>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus erat a consectetur sollicitudin. In id dapibus lorem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-sfeerbeelden" class="overlay">
+        <div class="overlay-container">
+            <button class="close-overlay"><img class="close-arrow" src="images/up-arrow.png"></button>
+            
+        </div>
+    </div>
+
+    <div id="overlay-contact" class="overlay">
+        <div class="overlay-container">
+            <button class="close-overlay"><img class="close-arrow" src="images/up-arrow.png"></button>
+            <h1>Contact</h1>
+            <p>Adres: 1234 lorem ipsum street, Pellentesque, CA, uSA</p>
+            <p>E-mail: <a href="mailto:info@spel-rebel.nl">info@spel-rebel.nl</a></p>
+            <p>Tel: <a href="tel:+31612344321">+31 6 1234 4321</a></p>
+        </div>
+    </div>
+
+    <section id="parallax">
+        <div class="parallax-container">
+            <div class="parallax-layer sun-reflection">
+                <div id="img1" class="background"></div>
+                <div id="img2" class="sun"></div>
+            </div>
+            <div id="img3" class="parallax-layer reflection"></div>
+            <div id="img4" class="parallax-layer beach-yoga"></div>
+        </div>
+    </section>
+    <section id="additional-content">
+        <!-- Additional content goes here -->
+        <!-- Timeline goes here -->
+    </section>
     <footer>
         <div class="footer-left-content">
             <div class="footer-content">
@@ -50,10 +175,7 @@
             </div>
         </div>
     </footer>
+  
+  <script src="index.js"></script>
 </body>
-
 </html>
-
-
-
-
