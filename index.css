@@ -178,7 +178,7 @@ html {
 
 .outer,
 .inner {
-    width: 50vw;
+    width: 100vw;
     padding: 20px;
     font-size: 30px;
     background: yellow;
@@ -201,4 +201,10 @@ html {
     overflow: hidden;
     border-radius: 0%;
     display: none;
+}
+
+
+
+.firstStep {
+    display: flex;
 }
