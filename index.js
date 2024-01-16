@@ -1,29 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to calculate translation based on scroll position
-    function calculateTranslation(initialTranslateY, scrollPos, rate) {
-        return initialTranslateY + scrollPos * rate;
-    }
-
-    // Function to calculate scale based on scroll position
-    function calculateScale(initialScale, scrollPos, rate, maxScale) {
-        const scale = initialScale + scrollPos * rate;
-        return Math.min(scale, maxScale);
-    }
-
-    // Function to convert vh to pixels
-    function vhToPixels(vh) {
-        return vh * document.documentElement.clientHeight / 100;
-    }
-
-    // Function to calculate height based on scroll position
-    function calculateHeight(initialHeightVh, scrollPos, rate, maxHeightVh) {
-        const initialHeightPx = vhToPixels(initialHeightVh);
-        const maxHeightPx = vhToPixels(maxHeightVh);
-        const height = initialHeightPx + scrollPos * rate;
-        return Math.min(height, maxHeightPx);
-    }
-
-    // New function to apply transformations
+    // Function to apply transformations, this is being triggerd on pageload and on scroll
     function applyTransformations() {
         const scrollPos = window.scrollY;
 
@@ -118,6 +94,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll event listener
     window.addEventListener('scroll', applyTransformations);
+
+    // Function to calculate translation based on scroll position
+    function calculateTranslation(initialTranslateY, scrollPos, rate) {
+        return initialTranslateY + scrollPos * rate;
+    }
+
+    // Function to calculate scale based on scroll position
+    function calculateScale(initialScale, scrollPos, rate, maxScale) {
+        const scale = initialScale + scrollPos * rate;
+        return Math.min(scale, maxScale);
+    }
+
+    // Function to convert vh to pixels
+    function vhToPixels(vh) {
+        return vh * document.documentElement.clientHeight / 100;
+    }
+
+    // Function to calculate height based on scroll position
+    function calculateHeight(initialHeightVh, scrollPos, rate, maxHeightVh) {
+        const initialHeightPx = vhToPixels(initialHeightVh);
+        const maxHeightPx = vhToPixels(maxHeightVh);
+        const height = initialHeightPx + scrollPos * rate;
+        return Math.min(height, maxHeightPx);
+    }
 
     // Open overlay
     document.querySelectorAll('.open-overlay').forEach(item => {
