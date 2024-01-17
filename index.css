@@ -207,8 +207,9 @@ html {
 
 .firstStep {
     display: flex;
+    color: black;
 }
 
 #first.text {
-    color: black;
+    color: whitesmoke;
 }
