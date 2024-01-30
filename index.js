@@ -16,8 +16,6 @@ gsap.to(sections, {
 });
 
 $(function () {
-    // This code runs when the document is ready
-
     $(".outer").mousemove(function (e) {
         // This function is triggered when the mouse moves over an element with the class "outer"
 
